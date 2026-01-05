@@ -1,44 +1,16 @@
+# Environment
+.env
+.streamlit/secrets.toml
+
+# Data files (don't upload to GitHub)
+attendance_log.csv
+data/
+logs/
+known_faces/
+
+# User credentials (regenerate on server)
+user.json
 
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
-build/
-dist/
-*.egg-info/
-
-# Environment variables
-.env
-*.env
-
-# Data files
-*.csv
-*.pkl
-*.pickle
-data/
-logs/
-attendance_logs/
-
-# Face images and encodings
-known_faces/
-*.jpg
-*.png
-*.jpeg
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Streamlit
-.streamlit/
+*.pyc

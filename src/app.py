@@ -188,7 +188,7 @@ def main():
     # --- Sidebar ---
     with st.sidebar:
         st.write(f"👤 Logged in as: {st.session_state.role}")
-        liveness_check = st.checkbox("Enable Liveness Check", value=False)
+        # liveness_check = st.checkbox("Enable Liveness Check", value=False)
         if st.button("🚪 Logout"):
             st.session_state.logged_in = False
             st.session_state.role = None
@@ -234,13 +234,13 @@ def main():
             st.warning("🔴 Camera is ACTIVE")
             webrtc_streamer(
                 key="face-recognition",
-                video_processor_factory=lambda: FaceRecognitionTransformer(liveness_check=liveness_check),
+                video_processor_factory=FaceRecognitionTransformer,  # Removed lambda and liveness_check
                 async_processing=True,
                 rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
                 media_stream_constraints={
                     "video": {"width": 640, "height": 480, "frameRate": 15},
                     "audio": False
-                }
+                    }
             )
         else:
             st.info("📷 Camera is off. Click 'Start Camera' to begin face recognition.")

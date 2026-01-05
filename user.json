@@ -1,13 +1,12 @@
 [
-    {
-      "username": "admin",
-      "password": "$2b$12$CEXAMPLEHASHEDPASS12345678examplehashs",
-      "role": "admin"
-    },
-    {
-      "username": "john",
-      "password": "$2b$12$DexampleHASHEDpass456examplehash",
-      "role": "user"
-    }
-  ]
-      
+  {
+    "username": "admin",
+    "password": "$2b$12$6DU4yYdoZl5BX041EvfKsO4IVtCNWXxoM.jpOn4vSLb6.u/ia8y/O",
+    "role": "admin"
+  },
+  {
+    "username": "john",
+    "password": "$2b$12$aguirWPKh7IRTSdZPazSi.nEvYlGAPZTN7cGOeTeJAYiFZUzLNase",
+    "role": "user"
+  }
+]
