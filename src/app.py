@@ -240,7 +240,7 @@ def main():
                 media_stream_constraints={
                     "video": {"width": 640, "height": 480, "frameRate": 15},
                     "audio": False
-                    }
+                }
             )
         else:
             st.info("📷 Camera is off. Click 'Start Camera' to begin face recognition.")

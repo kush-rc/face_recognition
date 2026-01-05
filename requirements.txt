@@ -1,6 +1,5 @@
 streamlit>=1.28.0
 streamlit-webrtc>=0.44.4
-https://github.com/z-mahmud22/Dlib_Windows_Python3.x/raw/main/dlib-19.24.0-cp310-cp310-linux_x86_64.whl
 face-recognition>=1.3.0
 opencv-python-headless==4.8.1.78
 numpy==1.23.5
@@ -11,6 +10,4 @@ openai>=1.0.0
 groq
 plotly
 google-generativeai
-scipy
 bcrypt
-imutils

@@ -175,7 +175,6 @@
 
 
 
-
 """
 Face recognition service for the Streamlit application.
 """
