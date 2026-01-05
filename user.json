@@ -1,0 +1,13 @@
+[
+    {
+      "username": "admin",
+      "password": "$2b$12$CEXAMPLEHASHEDPASS12345678examplehashs",
+      "role": "admin"
+    },
+    {
+      "username": "john",
+      "password": "$2b$12$DexampleHASHEDpass456examplehash",
+      "role": "user"
+    }
+  ]
+      
