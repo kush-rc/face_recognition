@@ -161,10 +161,13 @@ def run_encoding_script():
                 timeout=60  # 60 second timeout
             )
             
-            # Show output for debugging
+            # Show output in a success message instead of expander
             if result.stdout:
-                with st.expander("📋 Encoding Process Log"):
-                    st.code(result.stdout)
+                st.info("📋 Encoding Process Completed")
+                # Show a summary instead of full log
+                lines = result.stdout.strip().split('\n')
+                if lines:
+                    st.code(lines[-1])  # Show just the last line (summary)
             
             # Clear the cache to force reload of encodings
             st.cache_resource.clear()
@@ -179,7 +182,8 @@ def run_encoding_script():
         return False
     except subprocess.CalledProcessError as e:
         st.error(f"❌ The encoding script failed:")
-        st.code(e.stderr if e.stderr else "No error details available")
+        if e.stderr:
+            st.code(e.stderr)
         return False
     except Exception as e:
         st.error(f"❌ An unexpected error occurred: {e}")
@@ -278,7 +282,6 @@ def show_admin_dashboard():
         else:
             st.info("ℹ️ No people found in the database to delete.")
     
-    # Show current database status
     with st.expander("📊 Database Status"):
         people = list_people()
         if people:
@@ -292,3 +295,4 @@ def show_admin_dashboard():
                     st.write(f"- {person}: {num_images} images")
         else:
             st.info("No people in database yet.")
+
